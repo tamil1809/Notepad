@@ -1,0 +1,15 @@
+namespace Notepad
+{
+    runtimeclass MainViewModel : Windows.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        MainViewModel();
+		MainViewModel(Windows.Storage.FileProperties.DocumentProperties props, Windows.Storage.StorageFile textFile, String name, String type);
+		Windows.Storage.StorageFile TextFile{ get; };  //TextFile Property.
+		Windows.Storage.FileProperties.DocumentProperties TextProperties{ get; }; //Document Property
+		String Text; //Text property
+		String DocumentTitle; //Application Window Title Property
+		Int32 VCPosition; //Vertical cursor position.
+		Int32 HCPosition; //Horizontal cursor position.
+		Int32 ZoomAmount; //Zoom Status property
+    }
+}
